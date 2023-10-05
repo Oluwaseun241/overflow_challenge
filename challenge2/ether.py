@@ -1,10 +1,8 @@
 import requests
 
 def print_transfers(transaction_hash):
-    # Replace with your own Etherscan API key
-    api_key = '1NM2XCU6GI8WJN1J2NN32BQUEP9AZXXKQY'
+    api_key = 'Check my mail for the Key'
 
-    # Define the Etherscan API endpoint URL
     etherscan_url = f'https://api.etherscan.io/api'
 
     # Define the parameters for the API request
@@ -16,9 +14,9 @@ def print_transfers(transaction_hash):
     }
 
     try:
-        # Make the API request
+        # API request
         response = requests.get(etherscan_url, params=params)
-
+        print(response.text)
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
             data = response.json()
